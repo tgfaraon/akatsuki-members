@@ -1,0 +1,70 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #222;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; // Align items to the left
+
+  .navbar-logo {
+    color: orangered;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-left: 2rem;
+    margin-right: 2.5rem;
+    /* Prevent logo from shrinking on small screens */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: opacity 0.2s;
+  }
+
+  .navbar-hamburger {
+    display: none; // Hide by default (non-mobile)
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; // Align nav links to the right
+    margin: 0 2rem 0 auto; // push ul to the right
+    padding: 0;
+    transition: none;
+  }
+
+  li {
+    margin: 0 1.5rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    font-family: sans-serif;
+
+    &:hover,
+    &:focus {
+      background: orangered;
+      color: #fff;
+    }
+  }
+}
